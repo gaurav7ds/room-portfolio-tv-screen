@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 50.5%;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+.name{
+    width: 100%;
+    height: 100%;
+    padding: 20rem 5rem 0 5rem;
+}
+
+.home p{
+    font-size: 3.3rem;
+    color: white;
+    font-family: "Nerko One", cursive;
+    margin-left: 2rem;
+}
+
+h1{
+    font-size: 18rem;
+    color: white;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    z-index: -1;
+}
+h2{
+    font-size: 6rem;
+    color: white;
+}
+.about{
+    padding-top: 5rem;
+}
+.my-role p{
+    font-size: 13rem;
+    color: black;
+    font-family: "Matemasie", sans-serif;
+    background-image: url(https://plus.unsplash.com/premium_photo-1675609616037-3055059ceedf?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position:center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: -6rem;
+    margin-top: -4rem;
+}
+.my-role span{
+    color: white;
+    font-size: 4rem;
+    font-family: "Nerko One", cursive;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+.socials div{
+   display: flex;
+   align-items: center;
+   margin-bottom: 2rem;
+}
+.socials a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+.socials i{
+    font-size: 6rem;
+    color: #c03740;
+}
+.socials span{
+    color: #fff;
+    white-space: nowrap;
+    font-size: 3rem;
+    margin: 0 4rem 0 1rem;
+}
+
+.im-from{
+    padding: 5rem 10rem;
+
+}
+
+.me{
+    padding-top: 8rem;
+}
+
+.me p{
+    color: white;
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.me span{
+    display: inline-block;
+    font-size: 3.5rem;
+}
+
+.fa-hand-pointer{
+    color: #fff;
+    font-size: 3.3rem;
+    animation: scaleUp .6s linear infinite alternate;
+}
+@keyframes scaleUp {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.4);
+    }
+}
+.about-button{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-button a{
+    text-decoration: none;
+    outline: none;
+    color: white;
+    font-size: 3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
