@@ -1,6 +1,4 @@
 import * as THREE from 'three'
-import gsap from 'gsap'
-// import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 /**
  * Base
  */
@@ -8,9 +6,6 @@ import gsap from 'gsap'
 const canvas = document.querySelector('canvas.webgl')
 const textureLoader = new THREE.TextureLoader()
 const imageTexture = textureLoader.load('/me.jpg')
-
-
-//imageTexture.colorSpace = THREE.SRGBColorSpace
 
 const vertexShader = `
     uniform float time;
@@ -33,7 +28,6 @@ const fragmentShader = `
     }
 `;
 
-// const loader = new GLTFLoader()
 const material = new THREE.ShaderMaterial({
     uniforms: {
         time: { value: 0.0 },
@@ -47,40 +41,10 @@ const planeGeometry = new THREE.PlaneGeometry(3.2, 2.2, 128, 128)
 const plane = new THREE.Mesh(planeGeometry, material)
 plane.position.set(0, .4, 0)
 
-
 const scene = new THREE.Scene()
 
-// const cube = new THREE.Mesh(
-//     new THREE.BoxGeometry(1, 1, 1),
-//     new THREE.MeshBasicMaterial({ color: 0xff0000 })
-// )
-// cube.position.set(0, 0, 0)
-// scene.add(cube)
-
 scene.add(plane)
-// let model;
 
-// loader.load('/model.glb', (gltf) => {
-//     model = gltf.scene
-//     model.traverse((child) => {
-//         if (child.isMesh) {
-//             child.material = material
-//             child.material.side = THREE.DoubleSide;
-//         }
-//     })
-//     model.position.set(.7, .1, 0)
-//     model.scale.set(1,1,1)
-//     model.rotation.x = .1
-//     model.rotation.z = .1
-
-//     scene.add(model)
-// })
-
-const light = new THREE.DirectionalLight(0xffffff, 1)
-light.position.set(5, 5, 5)
-scene.add(light)
-const ambientLight = new THREE.AmbientLight(0xffffff, 1)
-scene.add(ambientLight)
 /**
  * Sizes
  */
@@ -133,19 +97,15 @@ const clock = new THREE.Clock()
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
+
     // Update materials
     material.uniforms.time.value = elapsedTime
-    // Render
-    // if(model){
-    //     model.rotation.y = -elapsedTime*.5
-    // }
+
     renderer.render(scene, camera)
-    // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
 
 tick()
-
 
 const btn = document.querySelector('.cta')
 let onAbout = false;
@@ -153,16 +113,8 @@ btn.addEventListener('click', (e) => {
     onAbout = !onAbout
     if(onAbout){
         btn.innerText = 'Back Up'
-        // gsap.to(model.position, {
-        //     y:3,
-        //     duration: .8
-        // })
         btn.attributes.href.value = '#about'
     }else{
-        // gsap.to(model.position, {
-        //     y:.1,
-        //     duration: 1
-        // })
         btn.innerText = 'Know More'
         btn.attributes.href.value = '#home'
     }
