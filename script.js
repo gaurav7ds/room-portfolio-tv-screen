@@ -19,7 +19,7 @@ const vertexShader = `
     void main() {
         vUv = uv;
         vec3 pos = position;
-        pos.z = sin(pos.y * 5.0 + time * 2.0) * 0.1 + sin(pos.x * 5.0 + time * 2.0) * 0.1;
+        pos.z = sin(pos.y * 3.0 + time * 1.0) * 0.1 + sin(pos.x * 4.0 + time * 1.0) * 0.1;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
     }
 `;
@@ -43,9 +43,9 @@ const material = new THREE.ShaderMaterial({
     fragmentShader: fragmentShader,
 })
 
-const planeGeometry = new THREE.PlaneGeometry(3.7, 2.4, 128, 128)
+const planeGeometry = new THREE.PlaneGeometry(3, 2, 128, 128)
 const plane = new THREE.Mesh(planeGeometry, material)
-plane.position.set(0, 0, 0)
+plane.position.set(0, .4, 0)
 
 
 const scene = new THREE.Scene()
