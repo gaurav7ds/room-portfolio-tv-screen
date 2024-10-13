@@ -43,7 +43,7 @@ const material = new THREE.ShaderMaterial({
     fragmentShader: fragmentShader,
 })
 
-const planeGeometry = new THREE.PlaneGeometry(3, 2, 128, 128)
+const planeGeometry = new THREE.PlaneGeometry(3.2, 2.2, 128, 128)
 const plane = new THREE.Mesh(planeGeometry, material)
 plane.position.set(0, .4, 0)
 

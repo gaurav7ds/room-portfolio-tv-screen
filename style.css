@@ -36,7 +36,7 @@ section.home{
     margin-left: 2rem;
     margin-bottom: 1rem;
     position: absolute;
-    top: 22rem;
+    top: 26rem;
     left: 5rem;
     z-index: 4;
 
@@ -48,7 +48,7 @@ h1{
     user-select: none;
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 70%;
     width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
