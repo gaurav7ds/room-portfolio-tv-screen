@@ -112,10 +112,10 @@ let onAbout = false;
 btn.addEventListener('click', (e) => {
     onAbout = !onAbout
     if(onAbout){
-        btn.innerText = 'Back Up'
+        btn.innerHTML = '戻る&uarr;'
         btn.attributes.href.value = '#about'
     }else{
-        btn.innerText = 'Know More'
+        btn.innerHTML = 'さらに表示&darr;'
         btn.attributes.href.value = '#home'
     }
 })
