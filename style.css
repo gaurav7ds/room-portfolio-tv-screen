@@ -176,14 +176,14 @@ h2{
 }
 .me{
     position: relative;
-    padding: 10rem 5rem 0 10rem;
+    padding: 7rem 5rem 0 10rem;
 }
 .line-vr{
     position: absolute;
     left: 5rem;
-    top: 10;
+    top: 4rem;
     width: 3px;
-    height: 90%;
+    height: 100%;
     background-color: #c03740;
 }
 .me-row{
@@ -191,7 +191,9 @@ h2{
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    margin: 2.6rem 0;
+}
+.mt-big{
+    margin-top: 7rem;
 }
 .me-row-top{
     display: flex;
