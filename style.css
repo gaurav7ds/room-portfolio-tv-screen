@@ -12,7 +12,7 @@ html{
 }
 body
 {
-    background-color: black;
+    background-color:#121212;
     overflow: hidden;
 }
 section{
@@ -61,7 +61,7 @@ h2{
     padding-top: 5rem;
 }
 .my-role p{
-    font-size: 13rem;
+    font-size: 10rem;
     letter-spacing: 9px;
     color: black;
     font-family: "Matemasie", sans-serif;
@@ -162,4 +162,73 @@ h2{
     font-size: 3rem;
     margin-right: 1rem;
     cursor: pointer;
+}
+.section-top-main{
+    padding: 0 3rem;
+    display: flex;
+    justify-content:center;
+}
+.section-p-main{
+    font-size: 3.3rem;
+    color: white;
+    margin-right: 1rem;
+    padding-top: 2.4rem;
+}
+.me{
+    position: relative;
+    padding: 10rem 5rem 0 10rem;
+}
+.line-vr{
+    position: absolute;
+    left: 5rem;
+    top: 10;
+    width: 3px;
+    height: 40vh;
+    background-color: #c03740;
+}
+.me-row{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin: 2.6rem 0;
+}
+.me-row-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.me-row::before{
+    position: absolute;
+    content: "";
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: #121212;
+    border: 4px solid #c03740;
+    border-radius: 50%;
+    top: 3rem;
+    left: -7.2rem;
+}
+.col-flex{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-flex h3{
+    font-size: 3.8rem;
+    margin-bottom: .6rem;
+}
+
+.col-flex p{
+    opacity: .4;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.year-h4{
+    font-size: 3.4rem;
+    color: #c03740;
+    margin-right: 7rem;
 }
